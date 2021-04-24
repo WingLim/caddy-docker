@@ -1,9 +1,7 @@
 FROM caddy:builder AS builder
 
 RUN xcaddy build \
-    --with github.com/WingLim/caddy-webhook \
-    && apk add upx \
-    && upx /usr/bin/caddy
+    --with github.com/WingLim/caddy-webhook
 
 FROM caddy:latest
 
