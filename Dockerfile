@@ -2,6 +2,8 @@ FROM alpine:latest as builder
 
 COPY bin/* /root
 
+COPY ubin/* /root
+
 WORKDIR /root
 
 RUN set -eux; \
