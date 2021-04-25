@@ -8,10 +8,6 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        ARCH: [ amd64, arm64, arm ]
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,11 +40,8 @@ jobs:
       - name: Install xcaddy
         run: go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 
-      - name: Build caddy
-        run: |
-          GOOS=linux GOARCH=${{ matrix.ARCH }} xcaddy build \
-          --with github.com/WingLim/caddy-webhook \
-          --output bin/caddy-${{ matrix.ARCH }}
+      - name: Build caddy with modules
+        run: bash build.sh
       
       - name: Run UPX
         uses: crazy-max/ghaction-upx@v1
@@ -62,7 +55,6 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm
-          build-args: arch=${{ matrix.ARCH }}
           push: true
           tags: |
             winglim/caddy:latest
