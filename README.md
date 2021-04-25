@@ -5,7 +5,7 @@
 [![Github Package](https://img.shields.io/static/v1?label=WingLim&message=Github%20Package&color=blue&logo=github)](https://github.com/users/WingLim/packages/container/package/caddy)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/winglim/caddy)
 
-Caddy docker image with modules in multi platform.
+Caddy V2 docker image with modules in multi platform.
 
 ## Platform
 
