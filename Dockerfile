@@ -10,6 +10,7 @@ RUN set -eux; \
         x86_64)  binArch='amd64';; \
         aarch64) binArch='arm64';; \
         armv7)   binArch="arm";; \
+        ppc64el|ppc64le) binArch='ppc64le';; \
         *) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1;; \
     esac; \
     mv caddy-${binArch} caddy
