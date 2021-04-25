@@ -23,7 +23,7 @@ This image add modules below:
 ```shell
 docker run -itd \
     -p 80:80 -p 443:443
-    -v $PWD/Caddyfile:/etc/caddy.Caddyfile \
+    -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
     -v $PWD/caddy_data:/data\
     winglim/caddy
 ```
