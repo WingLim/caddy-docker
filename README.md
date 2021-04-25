@@ -12,7 +12,8 @@ Caddy docker image with modules in multi platform.
 - linux/amd64
 - linux/386
 - linux/arm64
-- linux/arm
+- linux/arm/v7
+- linux/arm/v6
 - linux/ppc64le
 - linux/s390x
 

@@ -10,7 +10,8 @@ RUN set -eux; \
         x86_64)  binArch='amd64';; \
         x86) binArch='386';; \
         aarch64) binArch='arm64';; \
-        armv7)   binArch='arm';; \
+        armv7)   binArch='armv7';; \
+        armhf) binArch='armv6';; \
         ppc64el|ppc64le) binArch='ppc64le';; \
         s390x)   binArch='s390x';; \
         *) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1;; \
