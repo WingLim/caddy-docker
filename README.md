@@ -24,6 +24,7 @@ Using Caddy v2.3.0
 This image add modules below:
 
 1. [caddy-webhook](https://github.com/WingLim/caddy-webhook)
+2. [caddy-exec](https://github.com/abiosoft/caddy-exec)
 
 ## Usage
 
