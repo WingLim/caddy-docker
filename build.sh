@@ -7,6 +7,7 @@ function build() {
     export $2
     xcaddy build \
         --with github.com/WingLim/caddy-webhook \
+        --with github.com/abiosoft/caddy-exec \
         --output $3
 }
 
