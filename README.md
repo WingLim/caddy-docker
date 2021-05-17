@@ -7,7 +7,7 @@
 
 Caddy V2 docker image with modules in multi platforms.
 
-Using Caddy v2.3.0
+Using Caddy v2.4.0
 
 ## Platform
 
