@@ -6,6 +6,8 @@ on:
     paths-ignore:
       - "README.md"
   workflow_dispatch:
+  repository_dispatch:
+    types: [release-tagged]
   schedule:
     - cron: '0 0 */7 * *'
 
