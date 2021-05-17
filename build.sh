@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CADDY_VERSION=v2.3.0
+export CADDY_VERSION=v2.4.0
 
 linuxArch=("amd64" "386" "arm64" "ppc64le")
 for arch in "${linuxArch[@]}"; do
