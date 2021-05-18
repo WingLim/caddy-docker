@@ -8,8 +8,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [release-tagged]
-  schedule:
-    - cron: '0 0 */7 * *'
 
 jobs:
   build:
