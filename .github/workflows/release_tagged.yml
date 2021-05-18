@@ -1,11 +1,8 @@
-name: Build Docker Image
+name: Build Docker Image With New Release
 
 on:
-  push:
-    branches: [ main ]
-    paths-ignore:
-      - "README.md"
-  workflow_dispatch:
+  repository_dispatch:
+    types: [release-tagged]
 
 jobs:
   build:
@@ -42,7 +39,9 @@ jobs:
         run: go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 
       - name: Build caddy with modules
-        run: bash build.sh
+        env:
+          TAG: ${{ github.event.client_payload.tag }}
+        run: bash build.sh ${TAG}
       
       - name: Run UPX
         uses: crazy-max/ghaction-upx@v1
